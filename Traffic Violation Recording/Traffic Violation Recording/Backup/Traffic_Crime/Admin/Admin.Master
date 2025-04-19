@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Traffic_Crime.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1024px;
+            height: 274px;
+        }
+        .style2
+        {
+            font-weight: bold;
+            font-size: 14pt;
+        }
+        .style3
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="border: 2px solid #0066FF">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <img alt="" class="style1" src="../images/banner.jpg" /></td>
+            </tr>
+            <tr>
+                <td class="style3">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                        style="background-color: #0066FF" CssClass="style2">
+                        <DynamicMenuItemStyle BackColor="#0066FF" ForeColor="White" Width="150px" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Officers_Registration.aspx" 
+                                Text="Add Officer" Value="Add Officer"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Vehicle_Population.aspx" 
+                                Text="Vehicle Population" Value="Vehicle Population"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/AddFineDetails.aspx" Text="Add Fine" 
+                                Value="Add Fine">
+                                <asp:MenuItem NavigateUrl="~/Admin/ViewFineDetails.aspx" 
+                                    Text="View Fine Details" Value="View Fine Details"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Assign_Case.aspx" Text="Case Assign" 
+                                Value="Case Assign"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/View_Suggestions.aspx" 
+                                Text="View Suggestion" Value="View Suggestion"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Officer/Login.aspx" Text="Logout" Value="Logout">
+                            </asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#0066FF" ForeColor="White" Font-Size="12pt" 
+                            Width="150px" />
+                        <StaticMenuItemStyle BackColor="#3366FF" Font-Size="12pt" ForeColor="White" 
+                            Width="130px" />
+                        <StaticMenuStyle Width="1030px" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            </table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <p class="style3">
+        &nbsp;</p>
+</body>
+</html>

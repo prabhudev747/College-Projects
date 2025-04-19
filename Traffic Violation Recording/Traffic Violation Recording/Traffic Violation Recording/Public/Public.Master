@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.Master.cs" Inherits="Traffic_Crime.Public.a" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+            font-size: 40pt;
+            font-family: "ARIAL Black";
+            background-color: #FFFFFF;
+        }
+       .auto-style3 {
+            width: 145px;
+        }
+        .auto-style4 {
+            width: 954px;
+            background-color: #F0F3F7;
+        }
+        .auto-style5 {
+            color: #FFFFFF;
+        }
+        .auto-style7 {
+            font-size: 36pt;
+        }
+        .auto-style8 {
+            color: #990000;
+        }
+        .auto-style9 {
+            color: #0099FF;
+        }
+        </style>
+</head>
+<body style="background-color:#f8f1f1">
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%;">
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/ticket.png" style="top: 17px; left: 162px; position: absolute; height: 61px; width: 58px" />
+                    <strong style="text-align: right; " class="auto-style7">
+                    <span class="auto-style8">
+                    &nbsp;&nbsp; </span>
+                    <span class="auto-style9">
+                    TRAFFIC VIOLATION RECORDING</span></strong></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td >&nbsp;</td>
+                <td >
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" style="text-align: center; color: #FFFFFF; background-color: #333333;">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Login/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Complaint" Value="Complaint" NavigateUrl="~/Public/Complaint_Form.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Status" Value="Status" NavigateUrl="~/Public/Complaint_Status.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Public/SearchFineDetails.aspx" Text="Search Fine" Value="Search Fine">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Public/Suggestion.aspx" Text="Suggestion" Value="Suggestion"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Login/Public.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="White" ForeColor="Black" />
+                        <StaticMenuItemStyle ForeColor="White" Height="25px" Width="150px" Font-Bold="True" BackColor="Black" />
+                        <StaticMenuStyle BackColor="Black" Width="955px" />
+                    </asp:Menu>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style4">
+                    <asp:Image ID="Image1" runat="server" Height="398px" ImageUrl="~/images/banner.jpg" Width="953px" />
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style4">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td >&nbsp;</td>
+                <td class="auto-style5" style="background-color: #000000" >
+                    Copy right</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            </table>
+    </div>
+    </form>
+</body>
+</html>
+
